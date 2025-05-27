@@ -7,7 +7,7 @@ A WiseHoot egy Twitter által inspirált közösségi platform, ahol a felhaszn�
 ### Felhasználói hitelesítés
 
 - **Modal-alapú Bejelentkezés/Regisztráció**: Letisztult felugró űrlapok a felhasználói hitelesítéshez
-- **Email ellenőrzés**: A regisztrációhoz email és jelszó megerősítés szükséges
+- **Ellenőrzés**: A regisztrációhoz jelszó megerősítés szükséges és helyes email
 - **Fiókkezelés**: A felhasználók kezelhetik és törölhetik fiókjaikat
 
 ### Tartalom megosztás
@@ -169,12 +169,3 @@ Ez a projekt az MIT Licenc alatt áll - lásd a LICENSE fájlt a részletekért.
 - A Twitter letisztult felhasználói felülete és funkcionalitása által inspirálva
 - Ruby on Rails-szel készült
 - Tailwind CSS-sel formázva
-
-## Verzió információk
-
-### Környezeti követelmények
-
-- Ruby verzió: 3.4.4
-- Rails verzió: 8.0.2
-- SQLite: 3.x (alapértelmezett)
-- Bcrypt: 3.1.x (jelszókezeléshez)
