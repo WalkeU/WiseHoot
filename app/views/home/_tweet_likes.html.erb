@@ -1,0 +1,10 @@
+<div id="tweet-likes-<%= tweet.id %>" class="flex flex-col items-center ml-4 mt-1">
+  <span class="text-blue-600 font-semibold mb-1"><%= tweet.likes.count %></span>
+  <% if logged_in? %>
+    <% if tweet.likes.exists?(user: current_user) %>
+      <%= button_to "♥", tweet_like_path(tweet), method: :delete, class: "px-2 py-1 text-red-500 bg-white border border-red-200 rounded-full hover:bg-red-50 transition", form: { data: { turbo: true } } %>
+    <% else %>
+      <%= button_to "♡", tweet_like_path(tweet), method: :post, class: "px-2 py-1 text-gray-400 bg-white border border-gray-200 rounded-full hover:bg-blue-50 transition", form: { data: { turbo: true } } %>
+    <% end %>
+  <% end %>
+</div>

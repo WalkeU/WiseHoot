@@ -1,0 +1,16 @@
+<header class="flex items-center justify-between px-8 py-4 bg-white shadow-md border-b border-gray-100">
+  <%= link_to root_path, class: "flex items-center hover:opacity-80" do %>
+    <%= image_tag("huhu.png", alt: "Logo", class: "h-10 w-10 mr-3 rounded-full border border-blue-100") %>
+    <span class="text-2xl font-extrabold text-blue-600 tracking-tight">WiseHoot</span>
+  <% end %>
+  <div class="flex items-center space-x-4">
+    <% if logged_in? %>
+      <span class="text-gray-700 font-medium">Hello, <%= current_user.username %></span>
+      <%= link_to "Settings", settings_path, class: "px-4 py-2 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 font-semibold transition" %>
+      <%= link_to "Logout", logout_path, method: :delete, class: "px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-semibold transition" %>
+    <% else %>
+      <button onclick="openModal('login-modal')" class="px-4 py-2 text-blue-600 font-semibold hover:underline transition">Login</button>
+      <button onclick="openModal('register-modal')" class="px-4 py-2 bg-blue-50 text-blue-700 rounded-xl hover:bg-blue-100 font-semibold transition border border-blue-100">Register</button>
+    <% end %>
+  </div>
+</header>
