@@ -1,39 +1,55 @@
-# WiseHoot - Oszd meg bölcsességed
+# WiseHoot
+
+A Twitter-inspired social platform where users share short pieces of wisdom (max. 280 characters). A learning project in Ruby on Rails with a responsive Tailwind CSS interface.
+
+**Stack:** Ruby on Rails · Tailwind CSS · Hotwire · Docker · Kamal
+
+## Features
+
+- Sign up and log in through modal forms with validation; users can manage and delete their account.
+- Posts of up to 280 characters with a live, colour coded character counter.
+- Likes without page reload, relative timestamps.
+- Admin role with content moderation (admins can delete any post).
+- Responsive layout for desktop and mobile.
+
+---
+
+## Leírás (magyarul)
 
 A WiseHoot egy Twitter által inspirált közösségi platform, ahol a felhasználók rövid bölcsességeket oszthatnak meg a közösséggel. Ruby on Rails-szel készült és Tailwind CSS-sel formázott, modern, reszponzív felületet biztosít gondolatok megosztására és másokkal való kapcsolódásra.
 
-## Funkciók
+### Funkciók
 
-### Felhasználói hitelesítés
+#### Felhasználói hitelesítés
 
 - **Modal-alapú Bejelentkezés/Regisztráció**: Letisztult felugró űrlapok a felhasználói hitelesítéshez
 - **Ellenőrzés**: A regisztrációhoz jelszó megerősítés szükséges és helyes email
 - **Fiókkezelés**: A felhasználók kezelhetik és törölhetik fiókjaikat
 
-### Tartalom megosztás
+#### Tartalom megosztás
 
 - **Bölcsesség bejegyzések**: Ossz meg gondolatokat maximum 280 karakterben
 - **Karakterszámláló**: Valós idejű karakterszámlálás színjelzésekkel
 - **Formázás**: Hosszú szavak és szövegformázás automatikus kezelése
 
-### Közösségi interakció
+#### Közösségi interakció
 
 - **Kedvelés rendszer**: A felhasználók kedvelhetik/visszavonhatják a bejegyzések kedvelését
 - **AJAX interakciók**: Kedvelés/visszavonás oldal újratöltése nélkül
 - **Időbélyeg megjelenítés**: Látható, hogy mennyi ideje lett megosztva a bölcsesség
 
-### Felhasználói élmény
+#### Felhasználói élmény
 
 - **Reszponzív dizájn**: Működik asztali és mobil eszközökön
 - **Intuitív navigáció**: Letisztult fejléc felhasználói vezérlőkkel
 - **Hibakezelés**: Egyértelmű hibaüzenetek ellenőrzési problémák esetén
 
-### Admin képességek
+#### Admin képességek
 
 - **Tartalom moderálás**: Az admin felhasználók törölhetnek bármilyen bejegyzést
 - **Különleges jogosultságok**: Csak adminoknak elérhető funkciók és vezérlők
 
-## Technológiai stack
+### Technológiai stack
 
 - **Backend**: Ruby on Rails 8.0.2
 - **Frontend**:
@@ -44,7 +60,7 @@ A WiseHoot egy Twitter által inspirált közösségi platform, ahol a felhaszn�
 - **Modellek**: User (felhasználó), Tweet (bölcsesség bejegyzések), Like (kedvelés)
 - **Ruby verzió**: 3.4.4
 
-## Telepítés
+### Telepítés
 
 1. **Klónozd a repository-t**
 
@@ -75,7 +91,7 @@ A WiseHoot egy Twitter által inspirált közösségi platform, ahol a felhaszn�
 5. **Hozzáférés az alkalmazáshoz**
    Látogasd meg a `http://localhost:3000` címet a böngésződben
 
-## Admin felhasználó létrehozása
+### Admin felhasználó létrehozása
 
 Admin felhasználó létrehozása moderálási jogosultságokkal:
 
@@ -86,9 +102,9 @@ User.create(username: "admin", email: "admin@example.com", password: "your_passw
 
 Az alkalmazás felismeri az "admin" felhasználónevű felhasználókat, és különleges jogosultságokat biztosít számukra.
 
-## Projekt struktúra
+### Projekt struktúra
 
-### Kulcsfájlok
+#### Kulcsfájlok
 
 - **Modellek**
 
@@ -112,7 +128,7 @@ Az alkalmazás felismeri az "admin" felhasználónevű felhasználókat, és kü
   - `app/views/sessions/_register_form.html.erb` - Regisztrációs űrlap
   - `app/views/settings/index.html.erb` - Felhasználói beállítások oldal
 
-### Adatbázis séma
+#### Adatbázis séma
 
 **users (felhasználók)**
 
@@ -134,9 +150,9 @@ Az alkalmazás felismeri az "admin" felhasználónevű felhasználókat, és kü
 - timestamps: létrehozás/módosítás ideje
 - egyedi index: (user_id, tweet_id) páron
 
-## Testreszabás
+### Testreszabás
 
-### Stílus
+#### Stílus
 
 Az alkalmazás Tailwind CSS-t használ a stílusokhoz. A fő színséma tartalmaz:
 
@@ -144,7 +160,7 @@ Az alkalmazás Tailwind CSS-t használ a stílusokhoz. A fő színséma tartalma
 - Fehér/szürke színt a háttérhez és kártyákhoz
 - Piros színt a romboló műveletekhez
 
-### Funkciók hozzáadása
+#### Funkciók hozzáadása
 
 A moduláris struktúra megkönnyíti új funkciók hozzáadását:
 
@@ -152,7 +168,7 @@ A moduláris struktúra megkönnyíti új funkciók hozzáadását:
 - **Felhasználói profilok**: Bővítsd a User modellt és adj hozzá profil nézeteket
 - **Értesítések**: Hozz létre egy Notification modellt a felhasználói interakciókhoz
 
-## Közreműködés
+### Közreműködés
 
 1. Fork-old a repository-t
 2. Hozz létre egy feature ágat (`git checkout -b feature/amazing-feature`)
@@ -160,11 +176,11 @@ A moduláris struktúra megkönnyíti új funkciók hozzáadását:
 4. Push-old az ágra (`git push origin feature/amazing-feature`)
 5. Nyiss egy Pull Request-et
 
-## Licenc
+### Licenc
 
 Ez a projekt az MIT Licenc alatt áll - lásd a LICENSE fájlt a részletekért.
 
-## Köszönetnyilvánítás
+### Köszönetnyilvánítás
 
 - A Twitter letisztult felhasználói felülete és funkcionalitása által inspirálva
 - Ruby on Rails-szel készült
